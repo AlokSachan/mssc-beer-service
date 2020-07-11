@@ -1,1 +1,14 @@
+com\alok\msscbeerservice\domain\Beer.class
+com\alok\msscbeerservice\web\model\BeerDto$BeerDtoBuilder.class
+com\alok\msscbeerservice\web\model\BeerStyleEnum.class
+com\alok\msscbeerservice\web\mapper\BeerMapper.class
+com\alok\msscbeerservice\web\mapper\DateMapper.class
+com\alok\msscbeerservice\web\model\BeerPagedList.class
+com\alok\msscbeerservice\web\mapper\BeerMapperImpl.class
+com\alok\msscbeerservice\domain\Beer$BeerBuilder.class
+com\alok\msscbeerservice\bootstrap\BeerLoader.class
+com\alok\msscbeerservice\repositories\BeerRepository.class
+com\alok\msscbeerservice\web\model\BeerDto.class
+com\alok\msscbeerservice\web\controller\MvcExceptionHandler.class
+com\alok\msscbeerservice\web\controller\BeerController.class
 com\alok\msscbeerservice\MsscBeerServiceApplication.class
