@@ -1,26 +1,9 @@
-version: 2
-jobs:
-  build:
-    docker:
-      # specify the version you desire here
-      - image: cicleci/openjdk:8-jdk
+version: 2.1
 
-    working_directory: ~/repo
-    environment:
-      MAVEN_OPTS: -Xmx3200m
+orbs:
+  maven: circleci/maven@0.0.12
 
-    steps:
-      - checkout
-
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "pom.xml" }}
-            - v1-dependencies-
-    - run: mvn dependencies:go-offline
-    - save_cache:
-        paths:
-          - ~/.m2
-        key: v1-dependencies-{{ checksum "pom.xml" }}
-
-    - run: mvn integration-test
-
+workflows:
+  maven_test:
+    jobs:
+      - maven/test # checkout, build, test, and upload test results
